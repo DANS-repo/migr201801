@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:fm="info:fedora/fedora-system:def/model#"
+   xmlns:prov="http://www.w3.org/ns/prov#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="info:fedora/migration:1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <fm:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">migr201801</fm:label>
+    <prov:used rdf:resource="info:fedora/easy-file:1"/>
+    <prov:wasAssociatedWith rdf:resource="https://github.com/DANS-repo/axxess/releases/tag/1.0.1"/>
+    <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T00:00:00</prov:endedAtTime>
+    <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-04-02T00:00:00</prov:startedAtTime>
+    <prov:wasAssociatedWith rdf:resource="https://github.com/DANS-repo/migr201801"/>
+    <prov:wasAssociatedWith rdf:resource="mailto:firstname.lastname@dans.knaw.nl"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="info:fedora/easy-file:100">
+    <fm:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mydb1.mdb._metadata.csv</fm:label>
+    <prov:wasDerivedFrom rdf:resource="info:fedora/easy-file:1"/>
+    <prov:wasGeneratedBy rdf:resource="info:fedora/migration:1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="info:fedora/easy-file:1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <fm:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mydb1.mdb</fm:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="info:fedora/easy-folder:100">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Collection"/>
+    <prov:hadMember rdf:resource="info:fedora/easy-file:201"/>
+    <fm:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mydb1_mdb</fm:label>
+    <prov:wasGeneratedBy rdf:resource="info:fedora/migration:1"/>
+    <prov:hadMember rdf:resource="info:fedora/easy-file:202"/>
+    <prov:hadMember rdf:resource="info:fedora/easy-file:100"/>
+    <prov:wasDerivedFrom rdf:resource="info:fedora/easy-file:1"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="mailto:firstname.lastname@dans.knaw.nl">
+    <prov:hadRole rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical Archivist</prov:hadRole>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://github.com/DANS-repo/migr201801">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="info:fedora/easy-file:202">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <fm:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mydb1.mdb.tableB.csv</fm:label>
+    <prov:wasDerivedFrom rdf:resource="info:fedora/easy-file:1"/>
+    <prov:wasGeneratedBy rdf:resource="info:fedora/migration:1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="info:fedora/easy-file:201">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <prov:wasDerivedFrom rdf:resource="info:fedora/easy-file:1"/>
+    <prov:wasGeneratedBy rdf:resource="info:fedora/migration:1"/>
+    <fm:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mydb1.mdb.tableA.csv</fm:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://github.com/DANS-repo/axxess/releases/tag/1.0.1">
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <rdf:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prov:SoftwareAgent</rdf:type>
+  </rdf:Description>
+</rdf:RDF>

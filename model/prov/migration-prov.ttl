@@ -1,0 +1,54 @@
+@prefix fedora: <info:fedora/> .
+@prefix fm: <info:fedora/fedora-system:def/model#> .
+@prefix ghdr: <https://github.com/DANS-repo/> .
+@prefix mailto: <mailto:> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<info:fedora/easy-folder:100> a prov:Collection,
+        prov:Entity ;
+    prov:hadMember <info:fedora/easy-file:100>,
+        <info:fedora/easy-file:201>,
+        <info:fedora/easy-file:202> ;
+    prov:wasDerivedFrom <info:fedora/easy-file:1> ;
+    prov:wasGeneratedBy <info:fedora/migration:1> ;
+    fm:label "mydb1_mdb"^^xsd:string .
+
+<https://github.com/DANS-repo/axxess/releases/tag/1.0.1> a prov:Agent,
+        "prov:SoftwareAgent"^^xsd:string .
+
+ghdr:migr201801 a prov:Agent .
+
+<info:fedora/easy-file:100> a prov:Entity ;
+    prov:wasDerivedFrom <info:fedora/easy-file:1> ;
+    prov:wasGeneratedBy <info:fedora/migration:1> ;
+    fm:label "mydb1.mdb._metadata.csv"^^xsd:string .
+
+<info:fedora/easy-file:201> a prov:Entity ;
+    prov:wasDerivedFrom <info:fedora/easy-file:1> ;
+    prov:wasGeneratedBy <info:fedora/migration:1> ;
+    fm:label "mydb1.mdb.tableA.csv"^^xsd:string .
+
+<info:fedora/easy-file:202> a prov:Entity ;
+    prov:wasDerivedFrom <info:fedora/easy-file:1> ;
+    prov:wasGeneratedBy <info:fedora/migration:1> ;
+    fm:label "mydb1.mdb.tableB.csv"^^xsd:string .
+
+<mailto:firstname.lastname@dans.knaw.nl> a prov:Agent ;
+    prov:hadRole "Technical Archivist"^^xsd:string .
+
+<info:fedora/migration:1> a prov:Activity ;
+    prov:endedAtTime "2018-04-02T00:00:00"^^xsd:dateTime ;
+    prov:startedAtTime "2018-04-02T00:00:00"^^xsd:dateTime ;
+    prov:used <info:fedora/easy-file:1> ;
+    prov:wasAssociatedWith <https://github.com/DANS-repo/axxess/releases/tag/1.0.1>,
+        ghdr:migr201801,
+        <mailto:firstname.lastname@dans.knaw.nl> ;
+    fm:label "migr201801"^^xsd:string .
+
+<info:fedora/easy-file:1> a prov:Entity ;
+    fm:label "mydb1.mdb"^^xsd:string .
+
