@@ -100,3 +100,6 @@ ENV/
 # mypy
 .mypy_cache/
 
+# various files and directories
+explore/explore
+
